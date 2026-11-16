@@ -7,11 +7,13 @@
     --text-main: #ffffff;
     --text-muted: #c2cbd7;
     --text-subtle: #8292a8;
+    --text-accent: #00aff0;
 
     --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
     --radius-lg: 16px;
     --radius-md: 10px;
+    --radius-pill: 24px;
 }
 
 body {
@@ -81,4 +83,139 @@ main.container {
     border-radius: var(--radius-md);
     text-align: left;
     overflow: hidden;
+}
+
+.placeholder-text {
+    margin: 0;
+    color: var(--text-subtle);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* lang switcher */
+.lang-switcher {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem;
+    padding: 0.2rem;
+    background-color: var(--bg-surface-alt);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.lang-btn {
+    padding: 0.3rem 0.1rem;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-subtle);
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.lang-btn:hover {
+    color: var(--text-main);
+}
+
+.lang-btn.active {
+    background-color: var(--bg-surface);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+    color: var(--text-accent);
+}
+
+/* search bar */
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.3rem 0.25rem 0.85rem;
+    background-color: var(--bg-surface-alt);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-pill);
+    transition: border-color 0.2s ease;
+}
+
+.search-bar-wrapper:focus-within {
+    border-color: var(--text-accent);
+    box-shadow: 0 0 0 3px rgba(0, 175, 240, 0.12);
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.4rem 0;
+    flex-grow: 1;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.search-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.sort-btn {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    transition: all 0.15s ease;
+}
+
+.sort-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-accent);
+}
+
+/* results section */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.meta {
+    padding-left: 0.2rem;
+    color: var(--text-subtle);
+    font-size: 0.75rem;
+}
+
+.kogaje {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-height: 380px;
+    padding-right: 0.2rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-subtle) transparent;
+}
+
+.kotamba {
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    background-color: var(--bg-surface-alt);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    transition: all 0.15s ease;
+}
+
+.kotamba:hover {
+    color: var(--text-main);
+    background-color: rgba(0, 175, 240, 0.08);
+    border-color: var(--text-accent);
 }
