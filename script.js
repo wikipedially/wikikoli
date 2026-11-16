@@ -85,7 +85,7 @@ function filterAndRenderWords(query) {
 }
 
 function renderImi(entry) {
-    const displayPane = document.querySelectorAll(".display-pane");
+    const displayPane = document.querySelector(".display-pane");
     if (!displayPane) return;
 
     const validSenses = entry.imi ? entry.imi.filter(sense => {
@@ -118,7 +118,7 @@ function renderImi(entry) {
     }
 
     let andrHTML = "";
-    if (entyr.andr && entry.andr.length > 0) {
+    if (entry.andr && entry.andr.length > 0) {
         andrHTML = `<div class="meta-row" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-subtle); text-align: left;">
             <span>andr kakutropos:</span> <span>${entry.andr.join(", ")}</span>
         </div>`;
