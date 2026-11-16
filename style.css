@@ -1,0 +1,84 @@
+:root {
+    --bg-main: #0c0f14;
+    --bg-surface: #121820;
+    --bg-surface-alt: #1a222d;
+    --border-subtle: #212c3d;
+
+    --text-main: #ffffff;
+    --text-muted: #c2cbd7;
+    --text-subtle: #8292a8;
+
+    --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --radius-lg: 16px;
+    --radius-md: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+    color: var(--text-muted);
+    background-color: var(--bg-main);
+    background-image: radial-gradient(circle at 15% 15%, rgba(0, 175, 240, 0.14) 0%, transparent 45%), radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.07) 0%, transparent 45%);
+    background-attachment: fixed;
+}
+
+main.container {
+    width: 100%;
+    max-width: 50%;
+    height: 650px;
+    padding: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid transparent;
+    background-image: linear-gradient(var(--bg-surface), var(--bg-surface)), radial-gradient(circle at top left, rgba(0, 175, 240, 0.6), transparent 50%), radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.35), transparent 50%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+}
+
+/* left pane */
+.sidebar-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+    border-right: 1px solid var(--border-subtle)
+}
+
+.header h1 {
+    margin: 0 0 0.2rem 0;
+    letter-spacing: -0.01em;
+    color: var(--text-main);
+    font-size: 1.75rem;
+}
+
+.header p {
+    margin: 0;
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+}
+
+/* right pane */
+.display-pane {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: var(--bg-surface-alt);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    text-align: left;
+    overflow: hidden;
+}
