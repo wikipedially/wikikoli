@@ -66,7 +66,7 @@ function filterAndRenderWords(query) {
         }
     }
 
-    meta.textContent = `${matchingWords.length} koto pofina`;
+    meta.textContent = `${matchingWords.length} koto jam`;
 
     matchingWords.forEach(({ entry, glavna }) => {
         const tamba = document.createElement("button");
