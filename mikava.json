@@ -1,4 +1,17 @@
 {
+    "insa": {
+        "glavna": "insa",
+        "kara": "vjosa",
+        "glosa": "vjosa",
+        "andr": [],
+        "klani": ["tingko"],
+        "imi": [
+            {
+                "imi": "ine tel os flanka fu joku[ting]",
+                "kofal": "tingko"
+            }
+        ]
+    },
     "ringo": {
         "glavna": "ringo",
         "kara": "vjosa",
@@ -7,7 +20,7 @@
         "klani": ["tingko", "frawt", "roš"],
         "imi": [
             {
-                "imi": "tolon frawt bawm kara, šnano jam pjel roš, midori, os kiro varje[dar]. insa no šot kiwen[nen] aw kirkas, ti swet os sur med čisaj pje na kalib.",
+                "imi": "tolon frawt bawm kara, šnano jam pjel roš, midori, os kiro varje[-dar]. insa no šot kiwen[-nen] aw kirkas, ti swet os sur med čisaj pje na kalib.",
                 "kofal": "tingko",
                 "mza": ""
             }
