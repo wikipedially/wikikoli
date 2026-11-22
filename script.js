@@ -170,7 +170,7 @@ function setupDefinitionWordClicks() {
 
 function openWordFromUrl(targetWord, pushHistory = false) {
     const trimmed = targetWord.trim();
-    const query = targetWord.toLowerCase();
+    const query = trimmed.toLowerCase();
     let matchedEntry = null;
     let matchedKey = null;
 
@@ -305,7 +305,7 @@ function renderImi(entry) {
     let sensesHTML = "";
     validSenses.forEach((sense, index) => {
         const rawTekst = sense.imi || sense.tekst || "";
-        const linkedTekst = linkifyText(rawTekst)
+        const linkedTekst = linkifyText(rawTekst);
         const kofalValue = sense.kofal ? `<h4 style="margin: 0 0 0.4rem 0; color: var(--text-main); font-size: 1.1rem; font-weight: 600;">${sense.kofal}</h4>` : "";
 
         sensesHTML += `<div class="sense-item" style="margin-bottom: 1.2rem; text-align: left;">
