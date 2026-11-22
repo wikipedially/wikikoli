@@ -219,3 +219,110 @@ main.container {
     background-color: rgba(0, 175, 240, 0.08);
     border-color: var(--text-accent);
 }
+
+.def-word {
+    padding: 2px 4px;
+    margin: 0 -4px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.def-word:gover {
+    color: var(--text-accent);
+    background-color: rgba(0, 175, 240, 0.14);
+}
+
+.def-compound {
+    display: inline;
+    padding: 2px 4px;
+    margin: 0 -4px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.def-compound:has(.def-root:hover), .def-compound:has(.def-affix:hover) {
+    background-color: rgba(0, 175, 240, 0.14);
+}
+
+.def-root, .def-affix, .def-shared {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    transition: color 0.15s ease;
+}
+
+.def-compound .def-root:hover, .def-compound .def-affix:hover {
+    background-color: transparent;
+}
+
+.def-compound .def-root:hover, .def-compound:has(.def-root:hover) .def-shared {
+    color: var(--text-accent);
+}
+
+.def-compound .def-affix:hover {
+    color: var(--text-accent);
+}
+
+.def-compound:has(.def-affix:hover) .def-shared {
+    color: var(--text-accent);
+}
+
+.back-btn {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.back-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-accent);
+    background-color: rgba(0, 175, 240, 0.1);
+}
+
+@media (max-width: 820px) {
+    body {
+        align-items: flex-start;
+        padding: 1rem 0.75rem;
+    }
+
+    main.container {
+        max-width: 100%;
+        height: auto;
+        min-height: calc(100vh - 2rem);
+        padding: 1.25rem;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-pane {
+        padding-right: 0;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .kogaje {
+        max-height: 180px;
+    }
+
+    .display-pane {
+        height: auto;
+        min-height: 320px;
+        padding: 1.1rem;
+        overflow: visible;
+    }
+}
